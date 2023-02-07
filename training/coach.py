@@ -163,6 +163,7 @@ class Coach:
 
 	def configure_optimizers(self):
 		params = list(self.net.encoder_firststage.parameters()) if self.opts.training_stage == 1 else list(self.net.encoder_refinestage_list[self.opts.training_stage-2].parameters())
+		params += list(self.net.residue.parameters())
 		if self.opts.train_decoder:
 			params += list(self.net.decoder.parameters())
 		else:

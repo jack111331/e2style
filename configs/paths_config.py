@@ -8,9 +8,12 @@ dataset_paths = {
 	'celeba_train_segmentation': '',
 	'celeba_test_segmentation': '',
 	'ffhq': '',
+	'shhq': '/tmp2/r10922033/lab_project/SHHQ-Dataset/SHHQ-1.0/segmented_stylehuman_train',
+	'shhq_test': '/tmp2/r10922033/lab_project/SHHQ-Dataset/SHHQ-1.0/segmented_stylehuman_test'
 }
 
 model_paths = {
+	'stylegan_shhq': '/tmp2/r10922033/lab_project/insetGAN/stylegan_human_v2_1024.pkl',
 	'stylegan_ffhq': 'pretrained_models/stylegan2-ffhq-config-f.pt',
 	'ir_se50': 'pretrained_models/model_ir_se50.pth',
 	'parsing_net': 'pretrained_models/parsing.pth',

@@ -3,6 +3,13 @@ from configs.paths_config import dataset_paths
 
 
 DATASETS = {
+	'shhq_encode': {
+		'transforms': transforms_config.EncodeTransforms,
+		'train_source_root': dataset_paths['shhq'],
+		'train_target_root': dataset_paths['shhq'],
+		'test_source_root': dataset_paths['shhq_test'],
+		'test_target_root': dataset_paths['shhq_test'],
+	},
 	'ffhq_encode': {
 		'transforms': transforms_config.EncodeTransforms,
 		'train_source_root': dataset_paths['ffhq'],

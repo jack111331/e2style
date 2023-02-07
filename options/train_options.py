@@ -29,14 +29,14 @@ class TrainOptions:
 		self.parser.add_argument('--learn_in_w', action='store_true', help='Whether to learn in w space insteaf of w+')
 
 		self.parser.add_argument('--lpips_lambda', default=0.8, type=float, help='LPIPS loss multiplier factor')
-		self.parser.add_argument('--id_lambda', default=0.1, type=float, help='ID loss multiplier factor')
-		self.parser.add_argument('--parse_lambda', default=1.0, type=float, help='Mulit-Parse loss multiplier factor')
+		self.parser.add_argument('--id_lambda', default=0.0, type=float, help='ID loss multiplier factor')
+		self.parser.add_argument('--parse_lambda', default=0.0, type=float, help='Mulit-Parse loss multiplier factor')
 		self.parser.add_argument('--l2_lambda', default=1.0, type=float, help='L2 loss multiplier factor')
-		self.parser.add_argument('--w_norm_lambda', default=0, type=float, help='W-norm loss multiplier factor')
+		self.parser.add_argument('--w_norm_lambda', default=0.005, type=float, help='W-norm loss multiplier factor')
 		self.parser.add_argument('--lpips_lambda_crop', default=0, type=float, help='LPIPS loss multiplier factor for inner image region')
 		self.parser.add_argument('--l2_lambda_crop', default=0, type=float, help='L2 loss multiplier factor for inner image region')
 
-		self.parser.add_argument('--stylegan_weights', default=model_paths['stylegan_ffhq'], type=str, help='Path to StyleGAN model weights')
+		self.parser.add_argument('--stylegan_weights', default=model_paths['stylegan_shhq'], type=str, help='Path to StyleGAN model weights')
 		self.parser.add_argument('--checkpoint_path', default=None, type=str, help='Path to E2Style model checkpoint')
 
 		self.parser.add_argument('--max_steps', default=500000, type=int, help='Maximum number of training steps')

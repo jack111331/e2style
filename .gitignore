@@ -1,0 +1,4 @@
+exp_*/
+*.pyc
+exps/*
+nohup.out

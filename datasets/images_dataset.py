@@ -20,7 +20,7 @@ class ImagesDataset(Dataset):
 
 	def preprocessing_for_restoration(self, from_im, to_im):
 		from_im = np.array(from_im)
-		from_im = cv2.resize(from_im, (256,256))
+		from_im = cv2.resize(from_im, (1024,512))
 		to_im = np.array(to_im)
 		if np.random.uniform(0, 1) < 0.5:
 			from_im = cv2.flip(from_im, 1)
